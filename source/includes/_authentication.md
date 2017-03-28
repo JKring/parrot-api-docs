@@ -24,9 +24,9 @@ curl -H "Authorization: Token abcdefghij0123456789" \
 
 To get started with an API **Token**, simply shoot us an email (hey at parrotqa.com) and we'll get you setup pronto! 
 
-All requests are namespaced under your **Org ID**, for example:
+All requests are nested under your **Org ID**, for example:
 
-`GET /v1/orgs/42/recordings`
+`GET https://www.parrotqa.com/v1/orgs/42/recordings`
 
 **Tokens** are passed as a `Token` in the `Authorization` header, like so:
 
