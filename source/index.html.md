@@ -16,6 +16,7 @@ includes:
   - recordings_index
   - recordings_replays
   - recordings_update
+  - recordings_run
   - errors
 
 search: true

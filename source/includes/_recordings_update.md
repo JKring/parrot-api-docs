@@ -24,7 +24,9 @@ curl -H 'Content-Type: application/json' \
 
 `PUT https://www.parrotqa.com/v1/orgs/42/recordings/22`
 
-All `Update` endpoints follow the W3 spec for `PATCH` (as opposed to `PUT`), in that they only update attributes that are passed. In other words, you can pass any or all of the following attributes, and only the attributes you pass will be changed:
+All `Update` endpoints can be reached using `PATCH` or `PUT`, but they follow the spec for `PATCH` in that they only update attributes that are passed. 
+
+In other words, you can pass any or all of the following attributes, and only the attributes you pass will be updated:
 
 `name` `status` `parent_id` `screen_width` `start_url` `replay_frequency` `replay_minute` `replay_hour` `replay_day` `replay_timezone`
 
