@@ -65,4 +65,4 @@ curl -s -d '{"start_url":"https://www.yoursite.com","validate":true}' \
 
 `POST https://www.parrotqa.com/v1/orgs/42/recordings`
 
-This endpoint creates a new **Recording** under an **Org**, which navigates to the specified URL.
+This endpoint creates a new **Recording** under an **Org**, which navigates to start URL you pass.
