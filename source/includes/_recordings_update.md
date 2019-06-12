@@ -9,7 +9,13 @@ req = Net::HTTP::Put.new(uri.path, initheader = {
   'Content-Type' => 'application/json',
   'Authorization' => 'Token abcdefghij0123456789'
 })
-req.body = { start_url: "https:/www.your-website.com/new-log-in" }.to_json
+req.body = {
+  replay_frequency: 'daily',
+  replay_minute: 30,
+  replay_hour: 8,
+  replay_timezone: 'America/Los_Angeles',
+  run_after_save: true,
+}.to_json
 response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http| 
   http.request(req)
 end
@@ -18,7 +24,7 @@ end
 ```shell
 curl -H 'Content-Type: application/json' \
   -H "Authorization: Token abcdefghij0123456789" \
-  -X PUT -d '{"start_url":"https:/www.your-website.com/new-log-in"}' \
+  -X PUT -d '{"replay_frequency":"daily","replay_minute":30,"replay_hour":8,"replay_timezone":"America/Los_Angeles","run_after_save":true}' \
   https://www.parrotqa.com/v1/orgs/42/recordings/22
 ```
 

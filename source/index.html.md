@@ -13,6 +13,7 @@ includes:
   - introduction
   - authentication
   - recordings_header
+  - recordings_create
   - recordings_index
   - recordings_replays
   - recordings_update
